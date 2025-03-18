@@ -1,0 +1,317 @@
+adding projects and css style
+
+html
+    <section id="work">
+        <h1>Work</h1>
+        <div class="project-grid">
+            <div class="project-box">
+                <a href="https://github.com/Semehall/Letterboxd.git" target="_blank">
+                <img src="letter0.png" alt="Letterboxd Redesign">
+                <h3>Letterboxd Redesign</h3>
+                </a>
+                
+            </div>
+
+            <div class="project-box">
+                <a href="https://github.com/Semehall/Letterboxd.git" target="_blank">
+                <img src="shakeywakey.png" alt="ShakeAwake">
+                <h3>ShakeAwake</h3>
+            </a>
+            </div>
+            <div class="project-box">
+                <a href="oppr.org/s/ph7JIFME" target="_blank">
+                <img src="morsey.jpg" alt="Morse Code Game">
+                <h3>Morse Code Game</h3>
+            </a>
+            </div>
+        </div>
+    </section>
+
+
+css
+
+<style>
+       .project-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px; /* Increased gap for better spacing */
+    padding: 50px 0;
+}
+
+/* Bigger project boxes */
+.project-box {
+    width: 400px; /* Increased width */
+    height: 450px; /* Increased height */
+    text-align: center;
+    background: linear-gradient(135deg, #e4dfe4, #fffeff);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Hover effect */
+.project-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Images inside the boxes */
+.project-box img {
+    width: 100%;
+    height: 300px; /* Adjusted height for better fit */
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for images */
+.project-box:hover img {
+    transform: scale(1.05);
+}
+
+/* Title inside project box */
+.project-box h3 {
+    font-size: 22px;
+    margin-top: 15px;
+    color: #3d2c5a;
+}
+
+
+        /* Skills Section */
+        .skills-section {
+            overflow: hidden;
+            white-space: nowrap;
+            background: #ffffff;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        .skills-container {
+            display: flex;
+            gap: 40px;
+            animation: scrollSkills 20s linear infinite;
+        }
+
+        .skill {
+            background: #e4dfe4;
+            color: rgb(16, 15, 15);
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        @keyframes scrollSkills {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .about-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.about-img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+.about-text {
+    flex: 1;
+    max-width: 600px;
+}
+/*footer*/
+.footer {
+    background: #e4dfe4;
+    color: rgb(14, 13, 13);
+    padding: 60px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  
+}
+
+/*section spacing */
+
+section {
+    padding: 120px 20px; /* Increased top & bottom padding */
+    margin-bottom: 100px; /* Adds space between sections */
+}
+
+/* Work Section */
+#work {
+    padding: 150px 20px; /* Increased padding */
+    margin-bottom: 130px; /* More space below */
+}
+
+/* Skills Section */
+.skills-section {
+    padding: 120px 20px;
+    margin-top: 50px; /* More space between sections */
+}
+
+/* Resume Section */
+#cv {
+    padding: 130px 20px;
+    margin-bottom: 100px;
+}
+
+/* About Section */
+#about {
+    padding: 130px 20px;
+    margin-bottom: 120px;
+}
+
+/* Form Section (Contact) */
+.form-section {
+    padding: 130px 20px;
+    margin-bottom: 120px;
+}
+
+/* Footer - Add Top Margin for More Space */
+.footer {
+    margin-top: 100px;
+    padding: 80px 5%;
+}
+
+
+
+
+/* Center the form section under "Skills" */
+.form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Center the form container */
+.footer-form {
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Input fields and text area styles */
+.footer-form input, .footer-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    color: #000;
+}
+
+/* Submit button styles */
+.footer-form button {
+    width: 100%;
+    padding: 12px;
+    background: #ffcc00;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.footer-form button:hover {
+    background: #e6b800;
+}
+
+
+.footer h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.footer p {
+    max-width: 300px;
+}
+
+.footer-form input, .footer-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    background: transparent;
+    border: 1px solid #4c4b4b;
+    color: #0a0909;
+}
+
+.footer-form button {
+    padding: 12px 20px;
+    border: 1px solid #555454;
+    background: transparent;
+    color: #121212;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.footer-form button:hover {
+    background: #b77fc9;
+    color: #000;
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-social a {
+    color: #040404;
+    font-size: 22px;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #b77fc9;
+}
+/*Resume */
+.cv-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 20px;
+    background: #fff;
+    margin-top: 80px;
+}
+.cv-section h2 {
+    font-size: 32px;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.cv-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 700px;
+    margin-bottom: 15px;
+}
+/* Work section background */
+#work {
+    background: #ffffff; /* Light Gray */
+    padding: 60px 0;
+}
+
+/* Resume section background */
+#resume {
+    background: #4a5054; /* Light Blue */
+    padding: 60px 0;
+}
+
+
