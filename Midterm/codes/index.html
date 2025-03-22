@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semehal Kidane | Product Designer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="script.js"></script>
+
+    <style>
+       .project-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px; /* Increased gap for better spacing */
+    padding: 50px 0;
+}
+
+/* Bigger project boxes */
+.project-box {
+    width: 50px; /* Increased width */
+    height: 50px; /* Increased height */
+    text-align: center;
+    background: linear-gradient(135deg, #e4dfe4, #fffeff);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Hover effect */
+.project-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Images inside the boxes */
+.project-box img {
+    width: 100%;
+    height: 200px; /* Adjusted height for better fit */
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for images */
+.project-box:hover img {
+    transform: scale(1.05);
+}
+
+/* Title inside project box */
+.project-box h3 {
+    font-size: 22px;
+    margin-top: 15px;
+    color: #3d2c5a;
+}
+
+
+        /* Skills Section */
+        .skills-section {
+            overflow: hidden;
+            white-space: nowrap;
+            background: #ffffff;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        .skills-container {
+            display: flex;
+            gap: 40px;
+            animation: scrollSkills 20s linear infinite;
+        }
+
+        .skill {
+            background: #e4dfe4;
+            color: rgb(16, 15, 15);
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        @keyframes scrollSkills {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .about-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.about-img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+.about-text {
+    flex: 1;
+    max-width: 600px;
+}
+/*footer*/
+.footer {
+    background: #e4dfe4;
+    color: rgb(14, 13, 13);
+    padding: 60px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  
+}
+
+/*section spacing */
+
+section {
+    padding: 120px 20px; /* Increased top & bottom padding */
+    margin-bottom: 100px; /* Adds space between sections */
+}
+
+/* Work Section */
+#work {
+    padding: 150px 20px; /* Increased padding */
+    margin-bottom: 130px; /* More space below */
+}
+
+/* Skills Section */
+.skills-section {
+    padding: 120px 20px;
+    margin-top: 50px; /* More space between sections */
+}
+
+/* Resume Section */
+#cv {
+    padding: 130px 20px;
+    margin-bottom: 100px;
+}
+
+/* About Section */
+#about {
+    padding: 130px 20px;
+    margin-bottom: 120px;
+}
+/* Footer - Compact and Centered */
+.footer {
+    background-color: #ded6db; /* Light gray background */
+    color: #333;
+    text-align: center;
+    padding: 40px 5%; /* Reduce padding to make it smaller */
+    margin-top: 50px; /* Reduce space above the footer */
+}
+
+/* Footer Content Layout */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Adds spacing between elements */
+}
+
+/* Footer Social Icons */
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px; /* Small spacing above icons */
+}
+
+.footer-social a {
+    color: #333;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #b77fc9; /* Purple hover effect */
+}
+
+/* Footer Text */
+.footer p {
+    font-size: 14px; /* Make footer text smaller */
+    max-width: 400px;
+    margin-top: 10px;
+}/* Contact Me Section */
+.contact-me {
+    text-align: center;
+    padding: 80px 20px;
+    background: #fff;
+}
+
+.contact-me h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    background: #b59bba;
+    color: rgb(13, 13, 13);
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: #0056b3;
+}
+
+/* Responsive Footer - Mobile */
+@media (max-width: 768px) {
+    .footer {
+        padding: 30px 5%;
+    }
+
+    .footer-form {
+        max-width: 100%;
+    }
+}
+
+.cv-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 20px;
+    background: #fff;
+    margin-top: 80px;
+}
+.cv-section h2 {
+    font-size: 32px;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.cv-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 700px;
+    margin-bottom: 15px;
+}
+/* Work section background */
+#work {
+    background: #ffffff; /* Light Gray */
+    padding: 60px 0;
+}
+
+/* Resume section background */
+#resume {
+    background: #4a5054; /* Light Blue */
+    padding: 60px 0;
+}
+
+/* Make Sections Resize & Stay Centered */
+section {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto; /* Centers all sections */
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* Make Hero Section Centered & Responsive */
+#hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Centers vertically */
+    text-align: center;
+}
+
+/* Ensure Text Resizes on Smaller Screens */
+h1 {
+    font-size: 3rem; /* Adjusts for different screens */
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Smaller text for mobile */
+    }
+}/* Full-Screen Work Section */
+.project-section {
+    width: 100vw; /* Full width */
+    height: 90vh; /* Adjusted height */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 20px 0;
+    scroll-snap-type: x mandatory; /* Ensures smooth scrolling */
+    -webkit-overflow-scrolling: touch; /* Mobile smooth scrolling */
+    scroll-padding-left: 0; /* Ensures first project is visible */
+}
+
+/* Scrollable Grid */
+.project-grid {
+    display: flex;
+    gap: 30px; /* No gaps for smooth snapping */
+    flex-wrap: nowrap; /* Ensure horizontal scrolling */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    width: 100vw;
+    height: 90vh;
+    justify-content: flex-start; /* Ensures first project is visible */
+    align-items: center;
+}
+
+/* Hide Scrollbar */
+.project-grid::-webkit-scrollbar {
+    display: none;
+}
+
+/* Project Box - Smaller but Centered */
+.project-box {
+    flex: 0 0 50vw; /* Smaller width */
+    height: 60vh; /* Slightly larger to fit text */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #e4dfe4, #fffeff);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    scroll-snap-align: center;
+    text-align: center;
+    padding: 20px;
+    position: relative; /* Helps keep text visible */
+}
+
+/* Image - Keeps the Same Size */
+.project-box img {
+    width: 100vw; /* Keeps the same width */
+    max-width: 600px; /* Prevents it from being too large */
+    height: auto;
+    max-height: 40vh; /* Ensures it fits well */
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+/* Title - Ensures Visibility */
+.project-box h2 {
+    font-size: 2em; /* Adjust size */
+    margin-top: 15px; /* Ensure space below the image */
+    text-align: center;
+    width: 100%; /* Ensures text stays visible */
+    position: relative; /* Helps avoid overlap */
+}
+
+/* Scroll Buttons */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    font-size: 1.5em;
+}
+
+.scroll-left {
+    left: 20px;
+}
+
+.scroll-right {
+    right: 20px;
+}
+
+
+/* Ensure About Section Centers Properly */
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: center;
+}
+
+/* Resize About Image */
+.about-img {
+    width: 250px;
+    max-width: 100%;
+    border-radius: 10px;
+}/* Skills Section - Centered, Prevents Clipping */
+.skills-section {
+    text-align: center;
+    padding: 80px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: visible; /* Ensures no clipping of content */
+    white-space: nowrap;
+}
+
+/* Skills Container - Horizontal Scrolling */
+.skills-container {
+    display: flex;
+    justify-content: flex-start; /* Align to the left naturally */
+    gap: 15px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding: 10px 30px; /* Added left padding to prevent first skill cutoff */
+    scroll-behavior: smooth;
+}
+
+/* Individual Skill Box */
+.skill {
+    background: #e4dfe4;
+    color: #111;
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/* Hide Scrollbar on Webkit Browsers */
+.skills-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Add Spacing Before and After to Prevent Cutoff */
+.skills-container::before,
+.skills-container::after {
+    content: "";
+    flex: 0 0 30px; /* Ensures first and last skills are visible */
+}
+
+/* JavaScript to Scroll to Start on Page Load */
+
+
+/* Responsive Footer */
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Contact Form Centers */
+.footer-form {
+    max-width: 500px;
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill {
+        width: 80%;
+        max-width: 300px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    
+    
+    <header>
+        <h1 class="logo">Semehal Kidane</h1>
+        <div class="containeer">
+        
+            <nav>
+                <ul>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="aboutme.html">About</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+    
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <h1>My name is Semehal Kidane.</h1>
+        <h1>
+       I am a 
+            <span id="rotating-text">Product</span> Designer. 
+        </h1>
+    </section>
+    
+    
+
+    <section id="work">
+        <h1>Work</h1>
+        <div class="project-grid">
+            <div class="project-box">
+                <a href="https://github.com/Semehall/Letterboxd.git" target="_blank">
+                <img src="lol.png" alt="Letterboxd Redesign">
+                <h3>Letterboxd Redesign</h3>
+                </a>
+                
+            </div>
+
+            <div class="project-box">
+                <a href="https://github.com/Semehall/Letterboxd.git" target="_blank">
+                <img src="shakeywakey.png" alt="ShakeAwake">
+                <h3>ShakeAwake</h3>
+            </a>
+            </div>
+            <div class="project-box">
+                <a href="oppr.org/s/ph7JIFME" target="_blank">
+                <img src="armenu.jpg" alt="Morse Code Game">
+                <h3>MenU Prodct Design</h3>
+            </a>
+            </div>
+            <div class="project-box">
+                <a href="oppr.org/s/ph7JIFME" target="_blank">
+                <img src="morsey.jpg" alt="Morse Code Game">
+                <h3>Morse Code Game</h3>
+            </a>
+            </div>
+        </div>
+    </section>
+    
+ 
+</section>
+    <section class="skills-section">
+        <h3>Skills</h3>
+    
+        <div class="skills-container">
+    
+            <span class="skill">UX Design</span>
+            <span class="skill">UI Design</span>
+            <span class="skill">Prototyping</span>
+            <span class="skill">User Research</span>
+            <span class="skill">Data Analysis</span>
+            <span class="skill">Brand Identity</span>  
+        </div>
+        <h3>Software</h3>
+        <div class="skills-container">
+    
+            <span class="skill">Photoshop</span>
+            <span class="skill">Premiere</span>
+            <span class="skill">After Effects</span>
+            <span class="skill">Blender</span>
+            <span class="skill">InVison</span>
+            <span class="skill">Illustrator</span>
+            
+        </div>
+        <h3>Computer Language</h3>
+        <div class="skills-container">
+    
+            <span class="skill">HTML/CSS</span>
+            <span class="skill">Python</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Processing</span>
+            <span class="skill">Arduino</span>
+            
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="tty.jpg" alt="Semehal Kidane" class="about-img">
+                <div class="about-text">
+                    <p>Hey, I'm Semehal! I'm a passionate product and UX designer focused on making digital experiences seamless, accessible, and beautiful. I specialize in user research, wireframing, prototyping, and visual storytelling to create meaningful design solutions. Outside of design, you’ll find me exploring creative technologies, crafting new concepts, and pushing the boundaries of what’s possible. Let’s build something amazing together.</p>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact-me">
+    <h2>Contact Me</h2>
+    <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-social">
+            <h3>Social</h3>
+            <a href="mailto:syk9642@nyu.edu"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/semehal-kidane-a993b4238/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>&copy; 2025 Semehal Kidane. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</body>
+</html>

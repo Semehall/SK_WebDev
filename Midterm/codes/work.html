@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work | Semehal Kidane</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Centering Work Section 
+/* Centering Work Section */
+#work {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+/* Project Grid - Align in Center */
+.project-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 60px 0;
+}
+
+/* Bigger, More Interactive Project Boxes */
+  .project-box {
+        width: 90%; /* Make it flexible for different screen sizes */
+        max-width: 450px; /* Prevent it from being too large */
+        height: auto;
+        padding: 15px;
+    }
+
+/* Hover Effects */
+.project-box:hover {
+    transform: translateY(-10px) scale(1.05); /* Slight zoom & lift */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Unique Background Colors */
+.project-box:nth-child(1) { background: #e4dfe4; } /* Light Pink */
+.project-box:nth-child(2) { background: #e4dfe4; } /* Soft Green */
+.project-box:nth-child(3) { background: #e4dfe4; } /* Peach */
+
+/* Images Inside Project Box */
+.project-box img {
+    width: 100%;
+    height: 250px; /* Bigger image */
+    border-radius: 12px;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Hover Effect for Images */
+.project-box:hover img {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+/* Project Titles */
+.project-box h3 {
+    font-size: 22px;
+    margin-top: 15px;
+    color: #c8b3c8;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect for Titles */
+.project-box:hover h3 {
+    color: #222;
+}
+
+/* Interactive Overlay Effect */
+.project-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* On Hover, Show Overlay */
+.project-box:hover::before {
+    opacity: 1;
+}
+
+/* Make Project Boxes Clickable */
+.project-grid a {
+    text-decoration: none;
+    color: inherit;
+}/* Default Work Section */
+#work {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+/* Project Grid */
+.project-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 60px 0;
+}
+
+/* Default Project Box Sizing */
+.project-box {
+    width: 350px;
+    height: 400px;
+    position: relative;
+    text-align: center;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Responsive Layout for 768px and Below */
+@media (max-width: 768px) {
+    .project-grid {
+        flex-direction: column; /* Stack items vertically */
+        gap: 20px;
+    }
+
+    .project-box {
+        width: 90%; /* Make it flexible for different screen sizes */
+        max-width: 450px; /* Prevent it from being too large */
+        height: auto;
+        padding: 15px;
+    }
+
+    .project-box img {
+        height: 200px; /* Reduce image height to fit smaller screens */
+    }
+
+    .project-box h3 {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="logo">Semehal Kidane</h1>
+        <div class="containeer">
+        
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutme.html">About</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+        
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="work">
+        <div class="containeer">
+            <h1>Work</h1>
+            <div class="project-grid">
+
+                <div class="project-box">
+                    <a href="oppr.org/s/ph7JIFME" target="_blank">
+                    <img src="letter0.png" alt="Letterboxd Redesign">
+                    <h3>Letterboxd Redesign</h3> 
+                </a>
+                </div>
+
+                <div class="project-box">
+                    <a href="oppr.org/s/ph7JIFME" target="_blank">
+                    <img src="shakeywakey.png" alt="ShakeAwake">
+                    <h3>ShakeAwake</h3>
+                    </a>
+                </div>
+
+                <div class="project-box">
+                    <a href="oppr.org/s/ph7JIFME" target="_blank">
+                    <img src="morsey.jpg" alt="Morse Code Game">
+                    <h3>Morse Code Game</h3>
+                    </a>
+                </div>
+
+                <div class="project-box">
+                    <a href="oppr.org/s/ph7JIFME" target="_blank">
+                    <img src="armenu.jpg" alt="Menu">
+                    <h3>MenU Product Design</h3>
+                </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="containeer">
+            <p>&copy; 2025 Semehal Kidane. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+

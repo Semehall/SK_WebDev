@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work | Semehal Kidane</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Contact Section */
+.contact-section {
+    background-color: #ffffff; /* Dark background */
+    color: #040404;
+    padding: 80px 5%;
+}
+
+/* Contact Container */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: auto;
+    gap: 50px;
+}
+
+/* Left Side: Contact Info */
+.contact-info {
+    flex: 1;
+    max-width: 400px;
+}
+
+.contact-info h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.contact-info h4 {
+    font-size: 14px;
+    margin-top: 20px;
+    color: #020202;
+}
+
+.contact-info a {
+    color: #888;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    color: #de9cde;
+}
+
+/* Right Side: Contact Form */
+.contact-form {
+    flex: 1;
+    background-color: #e4dfe4; /* Darker background for form */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+}
+
+/* Form Group: Two Fields in One Row */
+.form-group {
+    display: flex;
+    gap: 15px;
+}
+
+.input-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input and Textarea Fields */
+.input-box label {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color:#000000;
+    ;
+}
+
+.input-box input,
+.input-box textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #444;
+    background: #ffffff;
+    color: #0e0e0e;
+    font-size: 14px;
+    border-radius: 6px;
+    outline: none;
+}
+
+.input-box textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: #ddb6dd;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-info {
+        max-width: 100%;
+    }
+
+    .contact-form {
+        max-width: 100%;
+    }
+
+    .form-group {
+        flex-direction: column;
+    }
+}
+
+    </style>
+
+     <header>
+        <h1 class="logo">Semehal Kidane</h1>
+        <div class="containeer">
+        
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="aboutme.html">About</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+        
+                </ul>
+            </nav>
+        </div>
+    </header>
+  <section class="contact-section">
+    <div class="contact-container">
+        <!-- Left Side: Contact Info -->
+
+       
+        <div class="contact-info">
+            <h1>Contact me</h1>
+            <p>If you have a project or business opportunity you would like to discuss, or just want to say hi, feel free to reach out.</p>
+
+            <h4>BUSINESS INQUIRIES</h4>
+            <a href="mailto:syk9642@nyu.edu">syk9642@nyu.edu</a>
+
+            <h4>GENERAL INQUIRIES</h4>
+            <a href="mailto:example@gmail.com">semhaly2003@gmail.com</a>
+        </div>
+
+        <!-- Right Side: Contact Form -->
+        <div class="contact-form">
+            <form action="#" method="post">
+                <div class="form-group">
+                    <div class="input-box">
+                        <label for="name">NAME</label>
+                        <input type="text" id="name" placeholder="Full name" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="email">EMAIL</label>
+                        <input type="email" id="email" placeholder="Email address" required>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="subject">SUBJECT</label>
+                    <input type="text" id="subject" placeholder="Subject line" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="message">MESSAGE</label>
+                    <textarea id="message" placeholder="Write your message here..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+</section>

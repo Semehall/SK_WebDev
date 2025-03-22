@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Semehal Kidane</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in forwards;
+            scroll-behavior: smooth;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: #e4dfe4;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #6f6f6d;
+        }
+
+        .about-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 100px 20px;
+            background: #fff;
+            margin-top: 80px;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            max-width: 900px;
+        }
+
+        .about-img {
+            width: 250px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h2 {
+            font-size: 28px;
+            color: #222;
+        }
+
+        .about-text p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .about-text a {
+            text-decoration: none;
+            color: #100f0f;
+            background: #f0c9f5;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .about-text a:hover {
+            background: #f0c9f5;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #e4dfe4;
+            color: #333;
+        }
+        #about {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+#about h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#about p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.contact-info h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.contact-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.contact-icons a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-icons a img:hover {
+    transform: scale(1.1);
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="logo">Semehal Kidane</h1>
+        <div class="containeer">
+        
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="about-section">
+        <div class="container about-content">
+            <img src="tty.jpg" alt="Semehal Kidane" class="about-img">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>I'm Semehal, a Product Designer based in New York. ! I'm a passionate product and UX designer dedicated to crafting seamless, accessible, and visually compelling digital experiences.</p>
+                <p>With a strong background in user research, wireframing, and prototyping, I specialize in bringing ideas to life through impactful design solutions. I love exploring creative technologies, developing innovative concepts, and pushing the boundaries of digital interaction.</p>
+
+                <p>Outside of design, I love playing chess and the piano  </p>
+                <p>Looking to collaborate? <a href="mailto:syk9642@nyu.edu">Let's connect!</a></p>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container">
+            <h1>Contact Me</h1>
+            <p>If you have any questions or comments, feel free to reach out via email or phone.</p>
+    
+            <div class="contact-info">
+                <h3>Email</h3>
+                <p><strong>syk9642@nyu.edu</strong></p>
+    
+                <h3>Mobile</h3>
+                <p>(+1) 234-567-8910</p>
+            </div>
+
+            
+    
+    
+    </section>
+    
+    <footer>
+        <div class="containeer">
+            <p>&copy; 2025 Semehal Kidane. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
