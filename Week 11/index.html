@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fortune Cookie 🍪</title>
+  <style>
+    /* style */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e8f0e5;
+      text-align: center;
+      padding-top: 100px;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      color: #d38aa3;
+      font-size: 42px;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+      z-index: 2;
+      position: relative;
+    }
+
+    button {
+      background-color: #f7cdd4;
+      border: none;
+      padding: 15px 40px;
+      font-size: 18px;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      color: #4a5c47;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      z-index: 2;
+      position: relative;
+    }
+
+    button:hover {
+      background-color: #f3b7c1;
+      transform: scale(1.05);
+    }
+
+    #fortune {
+      margin-top: 40px;
+      font-size: 22px;
+      color: #000c13;
+      padding: 25px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #fceef2;
+      border: 2px dashed #c0ced2;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+      z-index: 2;
+      position: relative;
+    }
+
+    #fortune.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    strong {
+      color: #b86f91;
+    }
+
+    /* star */
+    .stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .star {
+      position: absolute;
+      background: rgb(250, 6, 238);
+      border-radius: 50%;
+      opacity: 0.6;
+      animation: twinkle 2s infinite ease-in-out alternate;
+    }
+
+    @keyframes twinkle {
+      from { opacity: 0.2; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1.2); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="stars" id="stars-container"></div>
+
+  <h1>🍪 Crack the Fortune Cookie</h1>
+  <button onclick="revealFortune()">Open Cookie</button>
+  <div id="fortune"></div>
+
+  <script>
+    const fortunes = [
+      "Adventure awaits you in the near future.",
+      "You will discover a hidden talent soon.",
+      "An exciting opportunity is coming your way!",
+      "Patience brings sweet rewards.",
+      "Today is your day to shine ✨",
+      "A small act of kindness will change someone’s day.",
+      "Trust your instincts—they’re sharper than you think.",
+      "A surprise message will make you smile.",
+      "Your creativity will lead to something amazing.",
+      "New connections bring fresh beginnings."
+    ];
+
+    function revealFortune() {
+      const randomIndex = Math.floor(Math.random() * fortunes.length);
+      const message = fortunes[randomIndex];
+      const fortuneBox = document.getElementById("fortune");
+      fortuneBox.innerHTML = `🔮 <strong>Your fortune:</strong><br> "${message}"`;
+      fortuneBox.classList.add("show");
+    }
+
+//star
+    const starContainer = document.getElementById("stars-container");
+
+    function createStar() {
+      const star = document.createElement("div");
+      star.classList.add("star");
+      const size = Math.random() * 3 + 1 + "px";
+      star.style.width = size;
+      star.style.height = size;
+      star.style.top = Math.random() * 100 + "%";
+      star.style.left = Math.random() * 100 + "%";
+      star.style.animationDuration = `${Math.random() * 2 + 1}s`;
+      starContainer.appendChild(star);
+    }
+
+    for (let i = 0; i < 100; i++) {
+      createStar();
+    }
+  </script>
+
+</body>
+</html>
