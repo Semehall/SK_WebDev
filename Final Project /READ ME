@@ -1,0 +1,6 @@
+For my final project, I kept building on my midterm project, my personal portfolio site. 
+I made a bunch of upgrades like switching to a darker color scheme, adding a custom scrollbar, stars in the background, a “Contact Me” section, and a custom cursor. 
+I also used GSAP for smooth animations and added more JavaScript features overall.
+
+After presenting my work, I made some changes. For example, I ended up removing the stars because they didn’t match the more professional vibe I was going for. 
+I also added a Bootstrap carousel to show my work and project images in a cleaner, scrollable way. Lastly, I spent time organizing my code better to keep everything more readable and clean.
