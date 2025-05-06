@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me | Semehal Kidane</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      cursor: none;
+    }
+
+    header {
+      background-color: #151515;
+      padding: 20px 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: #ffffff !important;
+      text-decoration: none;
+      font-weight: 400;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #c499e3 !important;
+      font-weight: bold;
+      border-bottom: 2px solid #c499e3;
+    }
+
+    .about-skills-combo {
+      display: flex;
+      gap: 60px;
+      align-items: flex-start;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 130px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .about-content {
+      flex: 1 1 45%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .about-img {
+      width: 250px;
+      border-radius: 10px;
+    }
+
+    .about-text {
+      max-width: 600px;
+    }
+
+    .shooting-border {
+      position: relative;
+      display: inline-block;
+      padding: 4px 28px;
+      background: black;
+      color: white;
+      border-radius: 12px;
+      font-weight: bold;
+      font-size: 1.8rem;
+      z-index: 1;
+    }
+
+    .shooting-border::before {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: -6px;
+      right: -6px;
+      bottom: -4px;
+      border-radius: 16px;
+      background: conic-gradient(from 180deg at 50% 50%, #decdea, #7c4d9e, #e4dbeb, #7c4d9e, #dfceeb);
+      background-size: 200% 200%;
+      animation: animateBorder 3s linear infinite;
+      z-index: -1;
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+    }
+
+    @keyframes animateBorder {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 200% 50%; }
+    }
+
+    .skills-section-inline {
+      flex: 1 1 45%;
+    }
+
+    .skills-columns {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .skill-col h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    .skill-col ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .skill-col ul li {
+      margin-bottom: 10px;
+      padding-left: 20px;
+      position: relative;
+      color: #fbfbfb;
+    }
+
+    .skill-col ul li::before {
+      content: "\25CF";
+      position: absolute;
+      left: 0;
+      color: #8e48a1;
+    }
+
+    footer {
+      background-color: #151515;
+      color: #ffffff;
+      text-align: center;
+      padding: 40px 5%;
+      margin-top: 80px;
+    }
+
+    .footer-social {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .footer-social a {
+      color: #ffffff;
+      font-size: 20px;
+      transition: color 0.3s ease;
+    }
+
+    .footer-social a:hover {
+      color: #b77fc9;
+    }
+
+    .rounded, .pointed {
+      position: fixed;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+      transition: transform 0.1s ease;
+    }
+
+    .rounded {
+      width: 24px;
+      height: 24px;
+      border: 2px solid #c499e3;
+      border-radius: 50%;
+      background-color: rgba(196, 153, 227, 0.2);
+      box-shadow: 0 0 10px #c499e3;
+    }
+
+    .pointed {
+      width: 6px;
+      height: 6px;
+      background-color: #c499e3;
+      border-radius: 50%;
+      box-shadow: 0 0 5px #c499e3;
+      body {
+  cursor: none;
+}
+
+.rounded, .pointed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: transform 0.1s ease;
+}
+
+.rounded {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #c499e3;
+  border-radius: 50%;
+  background-color: rgba(196, 153, 227, 0.2);
+  box-shadow: 0 0 15px #c499e3;
+}
+
+.pointed {
+  width: 6px;
+  height: 6px;
+  background-color: #c499e3;
+  border-radius: 50%;
+  box-shadow: 0 0 5px #c499e3;
+}
+
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 class="logo">Semehal Kidane</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="resume.html" class="nav-link">Resume</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="about-skills-combo">
+    <div class="about-content">
+      <img src="semehalpic.JPG" alt="Semehal Kidane" class="about-img">
+      <div class="about-text">
+        <h2 class="shooting-border">About Me</h2>
+        <p>Hey, I’m a third-year Integrated Design and Media student at NYU Tandon School of Engineering, with a minor in Management. I focus on digital strategy, product management, and UX design, and I’m passionate about improving how people adopt and interact with technology. With hands-on experience in UX research, design, and cross-functional collaboration, I’m excited to support digital transformation and help build intuitive, user-centered solutions.</p>
+      </div>
+    </div>
+
+    <div class="skills-section-inline">
+      <h2 class="shooting-border">Skills</h2>
+      <div class="skills-columns">
+        <div class="skill-col">
+          <h3>Soft Skills</h3>
+          <ul>
+            <li>Communication</li>
+            <li>Problem-Solving</li>
+            <li>Collaboration</li>
+            <li>Empathy</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <h3>Hard Skills</h3>
+          <ul>
+            <li>User Research and Usability Testing</li>
+            <li>Figma</li>
+            <li>Design Thinking</li>
+            <li>Accessibility</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-social">
+      <a href="mailto:syk9642@nyu.edu"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/semehal-kidane-a993b4238/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p>&copy; 2025 Semehal Kidane. All rights reserved.</p>
+  </footer>
+
+
+  <div class="rounded"></div>
+  <div class="pointed"></div>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(".about-img", {
+      x: -100,
+      opacity: 0,
+      duration: 1.2,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".about-img",
+        start: "top 80%"
+      }
+    });
+
+    gsap.from(".about-text", {
+      x: 100,
+      opacity: 0,
+      duration: 1.2,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".about-text",
+        start: "top 80%"
+      }
+    });
+
+    gsap.from(".skills-section-inline", {
+      y: 100,
+      opacity: 0,
+      duration: 1.2,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".skills-section-inline",
+        start: "top 85%"
+      }
+    });
+
+    gsap.from("footer", {
+      opacity: 0,
+      y: 50,
+      duration: 1.2,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: "footer",
+        start: "top 95%"
+      }
+    });
+
+
+  const rounded = document.querySelector(".rounded");
+  const pointed = document.querySelector(".pointed");
+
+  document.addEventListener("mousemove", (e) => {
+    const { clientX: x, clientY: y } = e;
+    rounded.style.transform = `translate(${x}px, ${y}px)`;
+    pointed.style.transform = `translate(${x}px, ${y}px)`;
+  });
+
+
+
+    const currentPage = location.pathname.split("/").pop();
+    document.querySelectorAll('.nav-link').forEach(link => {
+      if(link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+        
+      }
+      
+    });
+  </script>
+  
+  
+
+</body>
+</html>

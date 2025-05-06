@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShakeAwake | Case Study</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #151515;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+    nav a {
+      color: #ffffff !important;
+      text-decoration: none;
+      font-weight: 400;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #c499e3 !important;
+    }
+    .page-header {
+      width: 100%;
+      text-align: center;
+      margin-top: 120px;
+    }
+    .shooting-border {
+      position: relative;
+      display: inline-block;
+      padding: 4px 28px;
+      background: black;
+      color: white;
+      border-radius: 12px;
+      font-weight: bold;
+      font-size: 2.5rem;
+      z-index: 1;
+    }
+    .shooting-border::before {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: -6px;
+      right: -6px;
+      bottom: -4px;
+      border-radius: 16px;
+      padding: 2px;
+      background: conic-gradient(from 180deg at 50% 50%, #decdea, #7c4d9e, #e4dbeb, #7c4d9e, #dfceeb);
+      background-size: 200% 200%;
+      animation: animateBorder 3s linear infinite;
+      z-index: -1;
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+    }
+    @keyframes animateBorder {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 200% 50%; }
+    }
+    section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+    section h2 {
+      color: #c499e3;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    section h3 {
+      color: #f0b3ff;
+      font-size: 1.4rem;
+      margin-top: 30px;
+    }
+    section p, section ul, section li {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #eee;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    img.project-img, img {
+      width: 100%;
+      max-width: 600px;
+      display: block;
+      margin: 20px auto;
+      border-radius: 10px;
+    }
+    footer {
+      background-color: #151515;
+      color: #ffffff;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .footer-social {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+    .footer-social a {
+      color: #ffffff;
+      font-size: 20px;
+      transition: color 0.3s ease;
+    }
+    .footer-social a:hover {
+      color: #b77fc9;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="logo">Semehal Kidane</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutme.html">About</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-header">
+    <h1 class="shooting-border">ShakeAwake</h1>
+    <p>A Silent, Vibration-Based Smart Alarm Designed for Accessibility</p>
+  </div>
+
+  <section>
+    <h2>Overview</h2>
+    <p>ShakeAwake is a silent, vibration-based alarm designed to help individuals with hearing impairments wake up independently. The device, embedded in a mattress pad, replaces traditional sound-based alarms with customizable vibration patterns.</p>
+  </section>
+
+  <section>
+    <h2>Problem Statement</h2>
+    <p>Have you ever struggled to wake up on time despite using multiple alarms? Many people, especially those with hearing impairments, face challenges with traditional alarm systems. ShakeAwake is a smart bed designed to wake users through vibrations instead of sound, ensuring accessibility and independence.</p>
+  </section>
+
+  <section>
+    <h2>Project Duration</h2>
+    <p>4 months</p>
+  </section>
+
+  <section>
+    <h2>Scope of Work & Timeline</h2>
+    <ul>
+      <li>Month 1: Discover</li>
+      <li>Month 2: Define</li>
+      <li>Month 3: Ideate & Design</li>
+      <li>Month 4: Testing</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Our Approach</h2>
+    <ul>
+      <li>Conducted user interviews to understand hearing-impaired users' needs.</li>
+      <li>Created low-fidelity prototypes and tested vibration levels.</li>
+      <li>Designed a mobile app interface with customizable alarm settings.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Wireframes & Prototypes</h2>
+    <img src="shake.png" alt="ShakeAwake Wireframe">
+    
+    <h2>Hardware Materials</h2>
+    <img src="motor.png" style="width: 200px; height: auto;" />
+    <img src="thin_film.png" style="width: 200px; height: auto;" />
+    <img src="ultrasonic.png" style="width: 200px; height: auto;" />
+  </section>
+
+  <section>
+    <h2>Final Outcome</h2>
+    <p>ShakeAwake provides a comfortable, effective, and customizable alarm solution. It empowers users with hearing impairments to wake up independently through smart vibrations and mobile control.</p>
+    <video width="600" autoplay loop muted controls poster="thumbnail.jpg">
+        <source src="ShAw Final.mp4" type="video/mp4">
+</section>
+
+  <section>
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li>User-centered design leads to inclusive solutions.</li>
+      <li>Early prototyping improves hardware refinement.</li>
+      <li>Customization enhances satisfaction and control.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <div class="footer-social">
+      <a href="mailto:syk9642@nyu.edu"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/semehal-kidane-a993b4238/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p>&copy; 2025 Semehal Kidane. All rights reserved.</p>
+  </footer>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".page-header", {
+      opacity: 0,
+      y: 50,
+      duration: 1.2,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".page-header",
+        start: "top 90%"
+      }
+    });
+    gsap.utils.toArray("section").forEach(section => {
+      gsap.from(section, {
+        opacity: 0,
+        y: 80,
+        duration: 1.2,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: section,
+          start: "top 85%"
+        }
+      });
+    });
+    gsap.from("footer", {
+      opacity: 0,
+      y: 50,
+      duration: 1.2,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: "footer",
+        start: "top 95%"
+      }
+    });
+  </script>
+</body>
+</html>
