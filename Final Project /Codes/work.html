@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work | Semehal Kidane</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+header {
+  background-color: #151515;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #c499e3;
+}
+
+#work {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.shooting-border {
+  position: relative;
+  display: inline-block;
+  padding: 4px 28px;
+  background: black;
+  color: white;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 2.5rem;
+  z-index: 1;
+}
+
+.shooting-border::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -6px;
+  right: -6px;
+  bottom: -4px;
+  border-radius: 16px;
+  padding: 2px;
+  background: conic-gradient(from 180deg at 50% 50%, #decdea, #7c4d9e, #e4dbeb, #7c4d9e, #dfceeb);
+  background-size: 200% 200%;
+  animation: animateBorder 3s linear infinite;
+  z-index: -1;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+@keyframes animateBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 0;
+}
+
+.project-box {
+  width: 300px;
+  height: auto;
+  padding: 20px;
+  background: #050505;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-align: center;
+}
+
+.project-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.2);
+}
+
+.project-box img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.project-box h3 {
+  color: #ffffff;
+  margin-top: 15px;
+}
+
+
+@media (max-width: 768px) {
+    .project-grid {
+        flex-direction: column; 
+        gap: 20px;
+    }
+
+    .project-box {
+        width: 90%; 
+        max-width: 450px; 
+        height: auto;
+        padding: 15px;
+    }
+
+    .project-box img {
+        height: 200px; 
+    }
+
+    .project-box h3 {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="logo">Semehal Kidane</h1>
+        <div class="containeer">
+        
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutme.html">About</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+        
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="work">
+        <h1 class="shooting-border">Work</h1>
+        <div class="project-grid">
+          <div class="project-box">
+            <a href="oppr.org/s/ph7JIFME" target="_blank">
+              <img src="letter0.png" alt="Letterboxd Redesign">
+    
+              <h3 class="shooting-border">Letterboxd Redesign</h3>
+            </a>
+          </div>
+      
+          <div class="project-box">
+            <a href="oppr.org/s/ph7JIFME" target="_blank">
+              <img src="shakeywakey.png" alt="ShakeAwake">
+              <h3>ShakeAwake</h3>
+            </a>
+          </div>
+      
+          <div class="project-box">
+            <a href="oppr.org/s/ph7JIFME" target="_blank">
+              <img src="morsey.jpg" alt="Morse Code Game">
+              <h3>Morse Code Game</h3>
+            </a>
+          </div>
+      
+          
+        </div>
+      </section>
+      
+
+    <footer>
+        <div class="containeer">
+            <p>&copy; 2025 Semehal Kidane. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
